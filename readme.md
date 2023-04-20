@@ -3,3 +3,5 @@ As part of my coding projects, I developed a weather app using JavaScript, HTML,
 # I have used  `https://api.weatherapi.com/v1/forecast.json?key=(ENTER YOUR KEY FORM WEBSITE weatherapi.com)&q=${city}`
 # I have used  `https://api.weatherapi.com/v1/current.json?key=(ENTER YOUR KEY FORM WEBSITE weatherapi.com)&q=${city}`
 To fetch the forecast and current data.
+live website link below
+ [LIVE WEBSITE](https://weather-web52.netlify.app/)
