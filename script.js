@@ -166,7 +166,7 @@ const getData = async (event) => {
   }
   const city = inputBox.value;
   const fetchData = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=41288bcd03f743bfab4225439231704&q=${city}`
+    `https://api.weatherapi.com/v1/current.json?key=41288bcd03f743bfab4225439231704&q=${city}`
   );
 
 
@@ -186,7 +186,7 @@ const getData = async (event) => {
   pressureNew.innerHTML=data.current.pressure_mb;
 
   const fetchNData = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=41288bcd03f743bfab4225439231704&q=${city}`
+    `https://api.weatherapi.com/v1/forecast.json?key=41288bcd03f743bfab4225439231704&q=${city}`
   );
 
   const orgNData = await fetchNData.json();
@@ -195,21 +195,15 @@ const getData = async (event) => {
 
   for (var i = 0; i < firstColumns.length; i++) {
     var firstColumn = firstColumns[i];
-    // Perform desired actions on the first column
-    // For example, change the background color
     firstColumn.innerHTML = dataN.forecast.forecastday[0].hour[i*4].temp_c;
   }
   
   for (var i = 0; i < firstColumns1.length; i++) {
     var firstColumn = firstColumns1[i];
-    // Perform desired actions on the first column
-    // For example, change the background color
     firstColumn.innerHTML = dataN.forecast.forecastday[0].hour[i*4].time;
   } 
   for (var i = 0; i < firstColumns2.length; i++) {
     var firstColumn = firstColumns2[i];
-    // Perform desired actions on the first column
-    // For example, change the background color
     firstColumn.src = "https:"+dataN.forecast.forecastday[0].hour[i*4].condition.icon;
   }
   sunRisee.innerHTML=dataN.forecast.forecastday[0].astro.sunrise;
